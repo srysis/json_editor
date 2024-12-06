@@ -9,16 +9,16 @@ Keep in mind that since it's a very basic app, it only understands the following
 ```
 [
   {
-    _id_:numeric,
-    _name_:string,
-    _surname_:string,
-    _bio_:string
+    id:numeric,
+    name:string,
+    surname:string,
+    bio:string
   },
   {
-    _id_:numeric,
-    _name_:string,
-    _surname_:string,
-    _bio_:string
+    id:numeric,
+    name:string,
+    surname:string,
+    bio:string
   },
   {
     ...

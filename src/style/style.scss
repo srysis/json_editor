@@ -1,0 +1,268 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Tahoma", sans-serif;
+	background-color: #000;
+	color: #fff;
+}
+
+header {
+	padding: 30px;
+	background-color: #000;
+
+	h1 {
+		margin-block-start: 0;
+		margin-block-end: 0;
+		font-size: 3.5em;
+		text-align: center;
+
+		a {
+			text-decoration: none;
+			color: #fff;
+		}
+
+		a:hover {
+			text-shadow: 0px 0px 5px white;
+		}
+
+		a:active {
+			text-shadow: none;
+		}
+	}
+}
+
+main {
+	padding: 20px 0;
+}
+
+div#intro_text {
+	p, pre {
+		width: 50%;
+		margin: auto;
+		margin-bottom: 50px;
+		font-size: 1.2em;
+		line-height: 1.4;
+		text-align: center;
+	}
+}
+
+div.flex_container {
+	display: flex;
+}
+
+div.navigation {
+	justify-content: space-between;
+	width: 30%;
+	margin: auto;
+
+	div {
+		width: 50%;
+		margin: 0 25px;
+		border: 1px solid white;
+		border-radius: 8px;
+		padding: 20px;
+		text-align: center;
+		cursor: pointer;
+
+		p {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+	}
+
+	div:hover {
+		background-color: #fff;
+		color: #000;
+	}
+
+	div:active {
+		box-shadow: inset 0px 0px 10px black;
+	}
+
+	span {
+		align-self: center;
+		font-size: 1.2em;
+	}
+}
+
+div#drop_area {
+	margin: auto;
+	border: 3px dashed white;
+	width: 600px;
+	height: 300px;
+	text-align: center;
+
+	p, div > #custom_upload_file {
+		display: block;
+		font-size: 1.8em;
+	}
+
+	p {
+		width: 50%;
+		margin: auto;
+	}
+
+	div > #custom_upload_file {
+		width: 45%;
+		margin: auto;
+		text-decoration: underline;
+	}
+
+	div > #custom_upload_file:hover {
+		text-shadow: 0px 0px 10px white;
+		cursor: pointer;
+	}
+
+	div > #custom_upload_file:active {
+		text-shadow: none;
+	}
+}
+
+div#drop_area.drag_over {
+	background-color: #aaa;
+}
+
+div#options {
+	display: flex;
+	justify-content: space-around;
+	width: 25%;
+	margin: auto;
+
+	#custom_upload_file, button.save {
+		font: inherit;
+		font-weight: bold;
+		font-size: 1.5em;
+		cursor: pointer;
+		color: #fff;
+	}
+
+	#custom_upload_file:hover, button.save:hover {
+		text-shadow: 0px 0px 15px white;
+	}
+
+	button.save {
+		border: none;
+		padding-block: 0;
+		padding-inline: 0;
+		background-color: transparent;
+	}
+}
+
+
+
+div.uploader, div.create_empty {
+	justify-content: space-around;
+	width: 95%;
+	margin: 20px auto;
+	border-radius: 10px;
+	padding: 10px 30px;
+	background-color: #222;
+
+	div#users_info {
+		width: 55%;
+
+		h2 {
+			margin-block-start: 0.2em;
+			margin-block-end: 0.5em;
+			font-size: 2.2em;
+			text-align: center;
+		}
+	}
+
+	div#add_user_container {
+		width: 40%;
+		border-left: 1px solid white;
+		text-align: center;
+
+		h2 {
+			margin-block-start: 0.2em;
+			margin-block-end: 0.5em;
+			font-size: 2.2em;
+		}
+	}
+}
+
+div.user {
+	margin: 25px 0;
+	border-radius: 5px;
+	padding: 15px;
+	background-color: #555;
+
+	div {
+		position: relative;
+
+		span {
+			font-weight: bold;
+		}
+
+		img {
+			position: absolute;
+			left: 96%;
+			width: 24px;
+			cursor: pointer;
+			filter: invert(80%);
+		}
+
+		img:hover {
+			filter: invert(60%);
+		}
+
+		img:active {
+			filter: invert(50%);
+		}
+	}
+
+	p {
+		width: 93%;
+		padding: 20px 0 10px 0;
+		font-size: 0.9em;
+		text-indent: 1%;
+		word-break: break-all;
+		white-space: normal;
+		color: #ddd;
+	}
+}
+
+form#add_user_form {
+	input, textarea, button {
+		border: none;
+		background-color: #444;
+		color: #fff;
+		font: inherit;
+	}
+
+	::placeholder {
+		color: #aaa;
+	}
+
+	input, textarea {
+		display: block;
+		width: 60%;
+		margin: 25px auto;
+		padding: 15px;
+	}
+
+	textarea {
+		height: 200px;
+	}
+
+	button {
+		width: 60%;
+		margin-top: 30px;
+		margin-bottom: 10px;
+		padding: 20px;
+		cursor: pointer;
+	}
+
+	button:hover {
+		background-color: #333;
+	}
+
+	button:active {
+		box-shadow: inset 0px 0px 10px black;
+	}
+}

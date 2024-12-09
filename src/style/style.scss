@@ -11,7 +11,7 @@ body {
 }
 
 header {
-	padding: 30px;
+	padding: 20px;
 	background-color: #000;
 
 	h1 {
@@ -40,14 +40,10 @@ main {
 }
 
 div#intro_text {
-	p, pre {
-		width: 50%;
-		margin: auto;
-		margin-bottom: 50px;
-		font-size: 1.2em;
-		line-height: 1.4;
-		text-align: center;
-	}
+	width: 50%;
+	margin: 160px auto 40px auto;
+	font-size: 1.4em;
+	text-align: center;
 }
 
 div.flex_container {
@@ -90,7 +86,7 @@ div.navigation {
 }
 
 div#drop_area {
-	margin: auto;
+	margin: 160px auto;
 	border: 3px dashed white;
 	width: 600px;
 	height: 300px;
@@ -264,5 +260,17 @@ form#add_user_form {
 
 	button:active {
 		box-shadow: inset 0px 0px 10px black;
+	}
+
+	p {
+		font-weight: bold;
+	}
+
+	p.success {
+		color: lightgreen;
+	}
+
+	p.error_tooltip {
+		color: red;
 	}
 }

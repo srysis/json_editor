@@ -15,7 +15,7 @@ class User extends React.Component {
 					</span>
 					<img src={delete_icon} alt="Delete user" title="Delete user" onClick={() => this.props.onDelete(this.user.id) } /> 
 				</div>
-				<p>{this.user.bio}</p>
+				<p>{this.user.bio === "" ? "No information given." : this.user.bio}</p>
 			</div>
 		)
 	}	

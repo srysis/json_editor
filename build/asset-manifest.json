@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.c1bbc51c.css",
-    "main.js": "./static/js/main.54ad6660.js",
+    "main.css": "./static/css/main.4b9dd176.css",
+    "main.js": "./static/js/main.fa4cf6e9.js",
     "static/media/trash-can.svg": "./static/media/trash-can.96dcc690130caa6da075528b2f219d19.svg",
     "index.html": "./index.html",
-    "main.c1bbc51c.css.map": "./static/css/main.c1bbc51c.css.map",
-    "main.54ad6660.js.map": "./static/js/main.54ad6660.js.map"
+    "main.4b9dd176.css.map": "./static/css/main.4b9dd176.css.map",
+    "main.fa4cf6e9.js.map": "./static/js/main.fa4cf6e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1bbc51c.css",
-    "static/js/main.54ad6660.js"
+    "static/css/main.4b9dd176.css",
+    "static/js/main.fa4cf6e9.js"
   ]
 }

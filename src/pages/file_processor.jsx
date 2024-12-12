@@ -55,7 +55,7 @@ class FileProcessor extends React.Component {
 		event.preventDefault();
 		event.stopPropagation();
 
-		const drop_area = document.querySelector("div#drop_area");
+		const drop_area = document.querySelector("div.drop_area.desktop");
 		drop_area.addEventListener("dragover", () => {
 			drop_area.classList.add("drag-over");
 		});
@@ -65,7 +65,7 @@ class FileProcessor extends React.Component {
 		event.preventDefault();
 		event.stopPropagation();
 
-		const drop_area = document.querySelector("div#drop_area");
+		const drop_area = document.querySelector("div.drop_area.desktop");
 		drop_area.addEventListener("dragleave", () => {
 			drop_area.classList.remove("drag-over");
 		});
@@ -115,21 +115,36 @@ class FileProcessor extends React.Component {
 		return(
 			<>
 				{!this.state.isFileUploaded && 
-					<div id="drop_area" 
-						 onDragOver={(event) => this.onDragOverHandler(event)} 
-						 onDragEnter={(event) => { event.preventDefault(); event.stopPropagation(); } } 
-						 onDragLeave={(event) => this.onDragLeaveHandler(event)} 
-						 onDrop={(event) => this.dropAndUploadFile(event)} 
-					>
-						<div>
-							<p style={{ "marginTop" : "70px" }}>Drop your file here</p>
-							<p style={{ "marginTop" : "20px" }}>or</p>
-							<label htmlFor="upload_file" id="custom_upload_file" style={{ "marginTop" : "20px" }}>
-								choose your file.
-							</label>
+					<>
+
+						{/* this div will be shown if it's a desktop version */}
+						<div className="drop_area desktop" 
+							 onDragOver={(event) => this.onDragOverHandler(event)} 
+							 onDragEnter={(event) => { event.preventDefault(); event.stopPropagation(); } } 
+							 onDragLeave={(event) => this.onDragLeaveHandler(event)} 
+							 onDrop={(event) => this.dropAndUploadFile(event)} 
+						>
+							<div>
+								<p style={{ "marginTop" : "120px" }}>Drop your file here</p>
+								<p style={{ "marginTop" : "20px" }}>or</p>
+								<label htmlFor="upload_file" id="custom_upload_file" style={{ "marginTop" : "20px" }}>
+									choose your file.
+								</label>
+							</div>
 						</div>
-						
-					</div>
+						{/*--------------------------------------------------*/}
+
+						{/* this div will be shown if it's a mobile version */}
+						<div className="drop_area mobile">
+							<div className="label_container">
+								<label htmlFor="upload_file" id="custom_upload_file" style={{ "marginTop" : "20px" }}>
+									Upload file
+								</label>
+							</div>
+						</div>
+						{/*-------------------------------------------------*/}
+
+					</>
 				}
 				<input type="file" id="upload_file" accept=".json" onChange={(event) => this.uploadFile(event)} style={ { "display": "none" } } />
 				{this.state.isFileUploaded &&

@@ -8,6 +8,7 @@ import FileProcessor from "./pages/file_processor.jsx"
 import CreateEmptyFile from "./pages/create_empty_file.jsx"
 
 import "./style/style.scss"
+import "./style/style-phone.scss"
 
 class App extends React.Component {
 	render() {

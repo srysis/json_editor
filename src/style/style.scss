@@ -85,11 +85,11 @@ div.navigation {
 	}
 }
 
-div#drop_area {
+div.drop_area.desktop {
 	margin: 160px auto;
 	border: 3px dashed white;
-	width: 600px;
-	height: 300px;
+	width: 50%;
+	height: 400px;
 	text-align: center;
 
 	p, div > #custom_upload_file {
@@ -116,6 +116,10 @@ div#drop_area {
 	div > #custom_upload_file:active {
 		text-shadow: none;
 	}
+}
+
+div.drop_area.mobile {
+	display: none;
 }
 
 div#drop_area.drag_over {

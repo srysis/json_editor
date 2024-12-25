@@ -27,4 +27,7 @@ Keep in mind that since it's a very basic app, it only understands the following
 
 ```
 
+**! There is an issue when user drags a file to the drop area, the hover pseudoclass does not trigger, thus the appearance of the drop area doesn't change. 
+Currently there is no fix for that as there is seemingly no reason for it to not work.**
+
 ! _This is not a final version of the app, so more QoL features like data validation will be added soon._ 

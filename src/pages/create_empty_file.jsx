@@ -20,6 +20,15 @@ class CreateEmptyFile extends React.Component {
 		this.downloadJSONFile = this.downloadJSONFile.bind(this);
 	}
 
+	uploadFile(event) {
+		const fileReader = new FileReader();
+		fileReader.readAsText(event.target.files[0], "UTF-8");
+		fileReader.onload = (e) => {
+			let users_data = JSON.parse(e.target.result);
+			this.setState( {users: users_data, isFileUploaded: true, filename: event.target.files[0].name} );
+		}
+	}
+
 	toggleAddUserForm() {
 		const isVisible = this.state.showAddUserForm;
 

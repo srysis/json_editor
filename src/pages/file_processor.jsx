@@ -116,7 +116,22 @@ class FileProcessor extends React.Component {
 			<>
 				{!this.state.isFileUploaded && 
 					<>
-
+						<div id="help_text">
+							This app only supports following JSON structure:
+							<p>
+								[
+									&#123;
+										"id": <em>integer</em>,
+										"name": <em>string</em>,
+										"surname": <em>string</em>,
+										"bio": <em>string</em>‎ 
+									&#125;,
+									&#123;
+										...
+									&#125;
+								]
+							</p>
+						</div>
 						{/* this div will be shown if it's a desktop version */}
 						<div className="drop_area desktop" 
 							 onDragOver={(event) => this.onDragOverHandler(event)} 
